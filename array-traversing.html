@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+    <script>
+        const arr = [1,2,45,66,32,11,7,88,9];
+        function displayArr(){
+            let el = document.getElementById('element').value;
+            // document.write(arr[el]);
+            if(el < arr.length && typeof parseInt(el) === "number" && el >= 0){
+                alert(arr[el]);
+            }else{
+                alert("Please enter valid input")
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" name="element" id="element">
+    <button onclick="displayArr()" >click</button>
+</body>
+</html>

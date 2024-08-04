@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insert</title>
+    <script>
+        const arr = [19,94,12,77,8,90,187,65];
+        const newEl = 2024;
+        const position = 1;
+
+        console.log(arr);
+        
+        for(let i=arr.length-1; i>=0; i--){
+            // console.log(arr[i]);
+          
+            if(i >= position){
+                arr[i+1] = arr[i]
+
+                if(i==position){
+                    arr[i] = newEl;
+                }
+            }
+     
+        }
+        console.log(arr);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
