@@ -1,0 +1,10 @@
+Note : commands are kept in []
+
+[echo > filename.txt]  (create a file)
+
+[mkdir Newfolder]  (create a folder)
+
+[copy *.* DS\Array\ ]  (This command will copy all files from the DSA directory to the DS\Array directory)
+
+[for %i in (*.*) do if not "%i"=="filename.ext" del "%i"]   (This command will delete all files in the DSA directory except for the file you specified. Make sure to replace filename.ext with the actual name of the file you want to keep.)
+ 
