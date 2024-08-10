@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Reverse String with Class</title>
+    <script>
+              
+        class StackReverseString {
+
+            constructor(){
+                this.data = [];
+                this.currentSize = this.data.length;
+                this.lastRemoveditem = null;
+            }
+
+            push(newVal){
+                this.data[this.currentSize] = newVal;
+                this.currentSize += 1;
+            }
+
+            pop(){
+                    if(this.currentSize > 0){
+                    this.lastRemoveditem = this.data[this.currentSize - 1];
+                    this.currentSize -= 1;
+                    this.data.length = this.currentSize;
+                    return this.lastRemoveditem;
+                }
+                else{
+                    alert("Stack is already empty");
+                }
+
+            }
+
+            reverseStr(item){
+              let strArray = item.split("");
+              
+                for (let i = 0; i < strArray.length; i++){
+                    this.push(strArray[i]);
+                }
+                for (let i = 0; i < strArray.length; i++){
+                strArray[i] = this.pop();    
+                }
+                
+                return strArray.join("");
+            }
+
+            display(str){
+                console.log(this.reverseStr(str)); // call by reference
+                
+            }
+        }
+        
+        let srs = new StackReverseString();
+        
+    </script>
+</head>
+<body>
+    <h1>Stack Reverse String with Class</h1>
+</body>
+</html>

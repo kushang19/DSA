@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack String Reverse</title>
+
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        function push(newVal){
+            
+            data[currentSize] = newVal;
+            currentSize+=1;
+        }
+
+        function pop(){
+            let lastRemovedItem = data[currentSize - 1];
+            currentSize-=1;
+            data.length = currentSize;
+
+            return lastRemovedItem;
+        }
+
+        function reverseStr(item){
+            // console.log(str);
+
+            for(let i=0; i<item.length; i++){
+                push(item[i]);
+            }
+            for(let i=0; i<item.length; i++){
+            //    console.log(pop());
+                item[i] = pop(); // call by reference 
+               
+            }
+            
+        }
+
+        // push(12);
+        // push(24);
+        // push(36);
+        // pop();
+        // pop();
+        // console.log(data);
+        
+        let str = 'kushang';
+        str = str.split("");
+        reverseStr(str);
+        console.log(str.join(""));
+        // console.log("Stack:",data);
+        
+
+        
+    </script>
+</head>
+<body>
+    <h1>Stack String Reverse</h1>
+</body>
+</html>
