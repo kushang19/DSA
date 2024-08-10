@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Indirect Recursion</title>
+    <script>
+        console.log("-----------{ Indirect Recursion }----------");
+
+        let money = 100;
+        let totalApple = 0;
+
+        function buyApple(x){
+            if(x>=0){
+                console.log("Money left", x,"rs,", totalApple, "Apple purchased");
+                buyMoreApple(x);
+            }else{
+                console.log("No Money Left :(");
+            }
+        }
+
+        function buyMoreApple(x){
+            totalApple++
+            x = x - 10;
+            buyApple(x);
+        }
+        
+        buyApple(money);
+
+        
+    </script>
+</head>
+<body>
+    <h1>Array Indirect Recursion</h1>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Head & Tail Recursion</title>
+    <script>
+
+// Debugger Examples 
+
+        // function colors(){
+        //     let data = 19;
+        //     console.log(data);
+        //     if(data > 20){
+        //         console.log("Greater");
+                
+        //     }else{
+        //         console.log("Lesser");
+                
+        //     }
+        // }
+        // function days(){
+        //     colors();
+        // }
+        // function fruits(){
+        //     days();
+        // }
+        // function topFunction(){
+        //     fruits();
+        // }
+        // topFunction();
+
+
+
+    //  Best Example to test skill of javascript call stack;
+
+        function test(x){
+
+        //    console.log(x); //head recusrion
+
+            if(x>0){
+                test(x-1); // recusrion function 
+            }
+
+            console.log(x); // tail recursion
+        }
+
+        test(5);
+
+        //Note: Head and Tail gives completed opposite result individually 
+    </script>
+</head>
+<body>
+    <h1>Array Head & Tail Recursion</h1>
+</body>
+</html>

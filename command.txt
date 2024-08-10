@@ -4,6 +4,8 @@ Note : commands are kept in []
 
 [del filename.txt] (delete a file)
 
+[ren oldfilename.txt newfilename.txt] (rename file);
+
 [mkdir Newfolder]  (create a folder)
 
 [copy *.* DS\Array\ ]  (This command will copy all files from the DSA directory to the DS\Array directory)
