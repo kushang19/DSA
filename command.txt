@@ -8,6 +8,10 @@ Note : commands are kept in []
 
 [mkdir NewfolderName]  (create a folder)
 
+[ren OldFolder NewFolder] (rename Folder, make sure you're in parent folder)
+
+[ren "Old Folder Name" "New Folder Name"]  (If the folder name contains spaces, enclose it in quotes)
+
 [copy *.* DS\Array\ ]  (This command will copy all files from the DSA directory to the DS\Array directory)
 
 [for %i in (*.*) do if not "%i"=="filename.ext" del "%i"]   (This command will delete all files in the DSA directory except for the file you specified. Make sure to replace filename.ext with the actual name of the file you want to keep.)
