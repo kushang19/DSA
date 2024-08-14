@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Front Rear isEmpty Operations</title>
+</head>
+<script>
+    let queue = [];
+    let currentSize = queue.length;
+    let maxSize = 5;
+
+    function enqueue(newVal){
+        if(currentSize >= maxSize){
+            alert("Queue is already full")
+        }else{
+            queue[currentSize] = newVal;
+            currentSize++;
+        }
+    }
+
+    function dequeue(){
+        if (!isEmpty()) {            
+            for (let i = 0; i < queue.length; i++) {
+                queue[i] = queue[i+1];
+            }
+            currentSize -=1 ;
+            queue.length = currentSize;
+        }else{
+            alert("Queue is empty");
+        }
+    }
+
+    function front(){
+        if(!isEmpty()){
+            console.log(queue[0]);
+        }else{
+            alert("Queue is empty");
+        }
+    }
+
+    function rear(){
+        if(!isEmpty()){
+            console.log(queue[currentSize - 1]);
+        }else{
+            alert("Queue is empty");
+        }
+    }
+
+    function isEmpty(){
+        if(currentSize <= 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    function display(){
+        console.log(queue);
+    }
+
+    enqueue(10)
+    enqueue(20)
+    enqueue(30)
+
+</script>
+<body>
+    <h1>Queue Front Rear isEmpty Operations</h1>
+</body>
+</html>
