@@ -8,9 +8,16 @@ Note : commands are kept in []
 
 [mkdir NewfolderName]  (create a folder)
 
+Rename:
 [ren OldFolder NewFolder] (rename Folder, make sure you're in parent folder)
-
 [ren "Old Folder Name" "New Folder Name"]  (If the folder name contains spaces, enclose it in quotes)
+
+
+Move:
+[move Folder1\file1.txt Folder1\file2.txt Folder2\] (move seleted files)
+[move Array\* Stack\] (move all files)
+[move "C:\Users\kushang\desktop\DSA\Data Structure\Array\linear-search.html" "C:\Users\kushang\desktop\DSA\Algorithm"] - (Move file from one folder to another, if folder name has space use "")
+
 
 [copy *.* DS\Array\ ]  (This command will copy all files from the DSA directory to the DS\Array directory)
 
