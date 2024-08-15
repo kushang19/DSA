@@ -15,7 +15,9 @@ Rename:
 
 Move:
 [move Folder1\file1.txt Folder1\file2.txt Folder2\] (move seleted files)
+
 [move Array\* Stack\] (move all files)
+
 [move "C:\Users\kushang\desktop\DSA\Data Structure\Array\linear-search.html" "C:\Users\kushang\desktop\DSA\Algorithm"] - (Move file from one folder to another, if folder name has space use "")
 
 
