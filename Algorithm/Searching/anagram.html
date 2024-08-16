@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anagram</title>
+    <script>
+              const str1 = "ata";
+              const str2 = "taa";
+
+              function anagramCheck(str1,str2){
+                  if(str1.length !== str2.length){
+                  return false
+              }
+                  let obj1 ={}
+                  for(char of str1){
+                      obj1[char] = (obj1[char] || 0) + 1;
+                  }
+
+                  for(ch of str2){
+                      if(!obj1[ch]){
+                          return false
+                      }
+                      obj1[ch]--
+
+                  }
+                  return true
+
+              }
+
+              console.log(anagramCheck(str1,str2));
+
+/*
+Let's consider an example where the two strings are not anagrams because str2 contains a character more times than str1.
+
+Example Strings:
+str1 = "ata"
+str2 = "taa"
+Step-by-Step Explanation:
+Create the Frequency Object (obj1) from str1:
+
+As you iterate through str1, you count the occurrences of each character:
+'a' appears twice.
+'t' appears once.
+The object obj1 would look like this: { a: 2, t: 1 }.
+Iterate Through str2 and Decrement Counts:
+
+Now you start iterating through str2 and decrement the counts in obj1 for each character:
+First Character ('t'):
+obj1['t'] is 1.
+After obj1['t']--, obj1['t'] becomes 0.
+Second Character ('a'):
+obj1['a'] is 2.
+After obj1['a']--, obj1['a'] becomes 1.
+Third Character ('a'):
+obj1['a'] is 1.
+After obj1['a']--, obj1['a'] becomes 0.
+Up to this point, everything is fine because the object obj1 is now { a: 0, t: 0 }, meaning that every character from str2 perfectly matched the counts in str1.
+
+Example with a Non-Anagram:
+Now let's change str2 to "taaa" (an extra 'a'):
+
+str1 = "ata"
+str2 = "taaa"
+Create the Frequency Object (obj1) from str1:
+
+After processing str1, obj1 is still { a: 2, t: 1 }.
+Iterate Through str2 and Decrement Counts:
+
+First Character ('t'):
+obj1['t'] is 1.
+After obj1['t']--, obj1['t'] becomes 0.
+Second Character ('a'):
+obj1['a'] is 2.
+After obj1['a']--, obj1['a'] becomes 1.
+Third Character ('a'):
+obj1['a'] is 1.
+After obj1['a']--, obj1['a'] becomes 0.
+Fourth Character ('a'):
+Now, obj1['a'] is 0, so after obj1['a']--, obj1['a'] becomes -1.
+Key Point:
+The count for 'a' becomes -1, indicating that str2 has more occurrences of 'a' than str1. At this point, the function should return false because str2 cannot be an anagram of str1—it has an extra 'a' that str1 doesn't have enough of.
+This shows how the decrementing process can reveal when two strings are not anagrams because one string has too many of a particular character.
+*/
+
+
+    </script>
+  </head>
+  <body>
+    <h1>Anagram</h1>
+  </body>
+</html>
