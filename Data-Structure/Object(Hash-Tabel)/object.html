@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <script>
+        const data = {
+            name: "Kushang",
+            age: 29,
+            gender: "Male",
+            email: "kushang81@gmail.com",
+            getName: function(){
+                return this.name
+            }
+        }
+        data.mobile = 7208463891;
+        delete data.gender
+        // console.log(data);
+        // console.log(data.getName());
+
+        for(x in data){
+            // console.log("key: ",x); 
+            // console.log("value: ",data[x]);
+        }
+
+        // console.log(Object.keys(data));  // Return Array of keys
+
+        // console.log(Object.values(data)); // Return Array of keys
+
+        console.log(Object.entries(data)); // Retuns Array of [key,value]
+        
+        
+
+        
+    </script>
+</head>
+<body>
+    <h1>Object</h1>
+</body>
+</html>
