@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insertion Sorting in Javascript</title>
+    <style>
+      body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    </style>
     <script>
       const data = [12, 11, 13, 5, 6];
 
@@ -13,20 +16,44 @@
           current = data[i];
           j = i - 1;
           while (j >= 0 && data[j] > current) {
-            data[j+1] = data[j];
+            data[j + 1] = data[j];
             j--;
-            
           }
-          data[j+1] = current;
+          data[j + 1] = current;
         }
       }
 
       insertionSort(data);
       console.log(data);
-      
     </script>
   </head>
   <body>
     <h1>Insertion Sorting in Javascript</h1>
+    <p>
+      Insertion sort is a simple sorting algorithm that works by iteratively
+      inserting each element of an unsorted list into its correct position in a
+      sorted portion of the list. It is a stable sorting algorithm, meaning that
+      elements with equal values maintain their relative order in the sorted
+      output.
+      <br />
+      Insertion sort is like sorting playing cards in your hands. You split the
+      cards into two groups: the sorted cards and the unsorted cards. Then, you
+      pick a card from the unsorted group and put it in the right place in the
+      sorted group.
+      <br />
+      Insertion Sort Algorithm: Insertion sort is a simple sorting algorithm
+      that works by building a sorted array one element at a time.<br/> 
+      It is considered an ” in-place ” sorting algorithm, meaning it doesn’t require
+      any additional memory space beyond the original array.<br/> 
+      To achieve insertion sort, follow these steps: We start with second element of the
+      array as first element in the array is assumed to be sorted. <br/>
+      Compare second element with the first element and check if the second element is
+      smaller then swap them. Move to the third element and compare it with the
+      second element, then the first element and swap as necessary to put it in
+      the correct position among the first three elements. <br/>
+      Continue this process, comparing each element with the ones before it and swapping as
+      needed to place it in the correct position among the sorted elements.<br/>
+      Repeat until the entire array is sorted.
+    </p>
   </body>
 </html>

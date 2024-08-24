@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selection Sort</title>
+    <style>
+        body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+      </style>
     <script>
-        let items = [20,12,53,3,1,11,44,67,7,88,43];
+        let items = [20,12,53,3,1];
 
         function selectionSort(data){
             for (let i = 0; i < data.length; i++) {
-                let minId = i;
+                let minId = i; // storing min index of the element
                 for(let j = i+1; j<data.length; j++){
                     if(data[j] < data[minId]){
                         minId = j
@@ -28,5 +31,8 @@
 </head>
 <body>
     <h1>Selection Sort</h1>
+    <p>
+        Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. 
+    </p>
 </body>
 </html>
