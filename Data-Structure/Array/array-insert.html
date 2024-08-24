@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array Insert</title>
     <script>
-        const arr = [19,94,12,77,8,90,187,65];
-        const newEl = 2024;
-        const position = 1;
+      const arr = [19, 94, 12, 77, 8, 90, 187, 65];
+      const newEl = 2024;
+      const position = 1;
 
-        console.log(arr);
-        
-        for(let i=arr.length-1; i>=0; i--){
-            // console.log(arr[i]);
-          
-            if(i >= position){
-                arr[i+1] = arr[i]
+      console.log(arr);
 
-                if(i==position){
-                    arr[i] = newEl;
-                }
-            }
-     
+      for (let i = arr.length - 1; i >= 0; i--) {
+        // console.log(arr[i]);
+
+        if (i >= position) {
+          arr[i + 1] = arr[i];
+
+          if (i == position) {
+            arr[i] = newEl;
+          }
         }
-        console.log(arr);
+      }
+      console.log(arr);
 
-        
+
+    //2 --------------------------------------------------------------------
+    
+    //   const array = [19, 94, 12, 77, 8, 90, 187, 65];
+
+    //   function arrayFunction(arr, index, item) {
+    //     if (index > 0 && typeof index === "number") {
+    //       for (let i = arr.length - 1; i >= index; i--) {
+    //         arr[i + 1] = arr[i];
+    //       }
+    //       arr[index] = item;
+    //       console.log(arr);
+    //     } else {
+    //       console.log("Invalid index");
+    //     }
+    //   }
+
+    //   arrayFunction(array, 1, 2024);
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Array Insert</h1>
-</body>
+  </body>
 </html>
